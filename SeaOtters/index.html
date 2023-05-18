@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <style>
+        html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background-image:url("back.png");
+      background-size:1920px 900px;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper {
+      width: 20%;
+      height: 25%;
+      float:right;
+      margin:50px;
+      border-radius: 1em;
+      opacity: 0.5;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    p{
+      margin-left: 35px;
+      padding-top: 10px;
+    }
+    hr{
+      width: 70px;
+      float: left;
+      margin-left: 20px;
+    }
+    </style>
+</head>
+<body>
+    <p> <a href="index.html"> HOME </a> </p>
+    <hr>
+   <!-- Swiper -->
+   <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <a href="information.html"> Profile </a> </div>
+      <div class="swiper-slide">
+        <a href="pysical characteristics.html"> 해달의 신체정보 </a> </div>
+      <div class="swiper-slide">해달의 서식지</div>
+      <div class="swiper-slide">해달의 생활양식</div>
+      <div class="swiper-slide">해달의 번식</div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      direction: "vertical",
+      slidesPerView: 1,
+      spaceBetween: 30,
+      mousewheel: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+</body>
+</html>
